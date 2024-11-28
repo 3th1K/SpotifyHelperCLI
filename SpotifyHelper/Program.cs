@@ -11,8 +11,8 @@ using static Program;
 public class Program
 {
     private readonly HttpClient _httpClient = new();
-    private const string CLIENT_ID = "7c92cd9dd638453a936f48d8363ad4fe";
-    private const string CLIENT_SECRET = "d066800127b34a10a773bf3473b08ca6";
+    private const string CLIENT_ID = "xxx";
+    private const string CLIENT_SECRET = "xxx";
     private const string REDIRECT_URI = "http://localhost:8080/callback";
 
     public async Task<string> Login()
@@ -233,7 +233,7 @@ public class Program
         var user = JsonSerializer.Deserialize<UserData>(response);
 
         Console.WriteLine($"Current user : {user.display_name}");
-        //var addresponse = await app.AddSongToPlaylist("5UTpxa2N5oEZT7N9UCsPEb", "7m4CgL81VVIHaaiSxyH922", tokenData.access_token);
-        await app.CopyPlaylist("5UTpxa2N5oEZT7N9UCsPEb", "5czbuYgMQyEjdrHdIx3iA0", tokenData.access_token);
+        //var addresponse = await app.AddSongToPlaylist("xxx", "xxx", tokenData.access_token);
+        await app.CopyPlaylist("xxx", "xxx", tokenData.access_token);
     }
 }
